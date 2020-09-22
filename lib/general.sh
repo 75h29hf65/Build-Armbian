@@ -140,16 +140,16 @@ create_sources_list()
 	case $release in
 	stretch|buster|bullseye)
 	cat <<-EOF > "${basedir}"/etc/apt/sources.list
-	deb http://${DEBIAN_MIRROR} $release main contrib non-free
+	deb https://${DEBIAN_MIRROR} $release main contrib non-free
 	#deb-src http://${DEBIAN_MIRROR} $release main contrib non-free
 
-	deb http://${DEBIAN_MIRROR} ${release}-updates main contrib non-free
+	deb https://${DEBIAN_MIRROR} ${release}-updates main contrib non-free
 	#deb-src http://${DEBIAN_MIRROR} ${release}-updates main contrib non-free
 
-	deb http://${DEBIAN_MIRROR} ${release}-backports main contrib non-free
+	deb https://${DEBIAN_MIRROR} ${release}-backports main contrib non-free
 	#deb-src http://${DEBIAN_MIRROR} ${release}-backports main contrib non-free
 
-	deb http://${DEBIAN_SECURTY} ${release}/updates main contrib non-free
+	deb https://${DEBIAN_SECURTY} ${release}-security main contrib non-free
 	#deb-src http://${DEBIAN_SECURTY} ${release}/updates main contrib non-free
 	EOF
 	;;
@@ -173,7 +173,7 @@ create_sources_list()
 
 	# stage: add armbian repository and install key
 	if [[ $DOWNLOAD_MIRROR == "china" ]]; then
-		echo "deb http://mirrors.tuna.tsinghua.edu.cn/armbian $RELEASE main ${RELEASE}-utils ${RELEASE}-desktop" > "${SDCARD}"/etc/apt/sources.list.d/armbian.list
+		echo "deb https://mirrors.tuna.tsinghua.edu.cn/armbian $RELEASE main ${RELEASE}-utils ${RELEASE}-desktop" > "${SDCARD}"/etc/apt/sources.list.d/armbian.list
 	else
 		echo "deb http://"$([[ $BETA == yes ]] && echo "beta" || echo "apt" )".armbian.com $RELEASE main ${RELEASE}-utils ${RELEASE}-desktop" > "${SDCARD}"/etc/apt/sources.list.d/armbian.list
 	fi

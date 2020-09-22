@@ -64,7 +64,7 @@ fi
 case $MAINLINE_MIRROR in
 	google) MAINLINE_KERNEL_SOURCE='https://kernel.googlesource.com/pub/scm/linux/kernel/git/stable/linux-stable' ;;
 	tuna) MAINLINE_KERNEL_SOURCE='https://mirrors.tuna.tsinghua.edu.cn/git/linux-stable.git' ;;
-	*) MAINLINE_KERNEL_SOURCE='git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git' ;;
+	*) MAINLINE_KERNEL_SOURCE='https://kernel.source.codeaurora.cn/pub/scm/linux/kernel/git/stable/linux-stable.git' ;;
 esac
 MAINLINE_KERNEL_DIR='linux-mainline'
 

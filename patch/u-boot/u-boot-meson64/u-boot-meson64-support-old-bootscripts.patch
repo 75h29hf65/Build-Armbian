@@ -13,7 +13,7 @@ index d82a674..8e9a724 100644
 +	"loadaddr=0x01080000\0" \
  	"ramdisk_addr_r=0x13000000\0" \
 +	"initrd_start=0x13000000\0" \
-+	"bloader=ext4load mmc 0:1\0" \
++	"bloader=fatload mmc 0:1\0" \
  	"fdtfile=amlogic/" CONFIG_DEFAULT_DEVICE_TREE ".dtb\0" \
  	BOOTENV
  #endif
