@@ -501,7 +501,7 @@ compile_firmware()
 	if [[ $USE_MAINLINE_GOOGLE_MIRROR == yes ]]; then
 		plugin_repo="https://kernel.googlesource.com/pub/scm/linux/kernel/git/firmware/linux-firmware.git"
 	else
-		plugin_repo="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git"
+		plugin_repo="https://kernel.source.codeaurora.cn/pub/scm/linux/kernel/git/firmware/linux-firmware.git"
 	fi
 	local plugin_dir="armbian-firmware${FULL}"
 	[[ -d "${SRC}/cache/sources/${plugin_dir}" ]] && rm -rf "${SRC}/cache/sources/${plugin_dir}"
